@@ -1,3 +1,12 @@
+# !! TEMP !!
+
+Release the chart:
+
+```sh
+helm package . --version 0.7.0
+helm repo index .
+```
+
 # Passbolt Helm chart
 
 <h3 align="center">
@@ -105,8 +114,8 @@ chart and deletes the release.
 
 ## Updating REAME.md
 
-We rely on the [helm-docs](https://github.com/norwoodj/helm-docs) helm plugin and [mdformat](https://github.com/executablebooks/mdformat) with [mdformat-tables](https://github.com/executablebooks/mdformat-tables) to generate and format the README.md on each release 
+We rely on the [helm-docs](https://github.com/norwoodj/helm-docs) helm plugin and [mdformat](https://github.com/executablebooks/mdformat) with [mdformat-tables](https://github.com/executablebooks/mdformat-tables) to generate and format the README.md on each release
 
 ```
-helm-docs -t README.md.gotmpl --dry-run | mdformat - > README.md  
+helm-docs -t README.md.gotmpl --dry-run | mdformat - > README.md
 ```

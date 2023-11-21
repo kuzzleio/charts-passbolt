@@ -1,0 +1,151 @@
+apiVersion: v1
+entries:
+  mariadb:
+  - annotations:
+      category: Database
+      licenses: Apache-2.0
+    apiVersion: v2
+    appVersion: 10.6.12
+    created: "2023-11-21T14:49:18.966921726+01:00"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    description: MariaDB is an open source, community-developed SQL database server
+      that is widely in use around the world due to its enterprise features, flexibility,
+      and collaboration with leading tech firms.
+    digest: 7b465fbc11e3511c48fdd42904a9acd3444203064bbc34d985d79f7d025ac8bb
+    home: https://github.com/bitnami/charts/tree/main/bitnami/mariadb
+    icon: https://bitnami.com/assets/stacks/mariadb/img/mariadb-stack-220x234.png
+    keywords:
+    - mariadb
+    - mysql
+    - database
+    - sql
+    - prometheus
+    maintainers:
+    - name: Bitnami
+      url: https://github.com/bitnami/charts
+    name: mariadb
+    sources:
+    - https://github.com/bitnami/containers/tree/main/bitnami/mariadb
+    - https://github.com/prometheus/mysqld_exporter
+    - https://mariadb.org
+    urls:
+    - charts/mariadb-11.5.7.tgz
+    version: 11.5.7
+  passbolt:
+  - apiVersion: v2
+    appVersion: 4.4.0-1-ce
+    created: "2023-11-21T14:49:18.964383674+01:00"
+    dependencies:
+    - name: passbolt-library
+      repository: https://download.passbolt.com/charts/passbolt-library
+      version: 0.2.7
+    - condition: redisDependencyEnabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 17.15.2
+    - condition: mariadbDependencyEnabled
+      name: mariadb
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.5.7
+    - condition: postgresqlDependencyEnabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 13.2.3
+    description: Helm chart for passbolt PRO and CE
+    digest: 046a276a988ff19df484f392f9b7b99204a00ce221bca8f7b7db5b1a31ad1e43
+    name: passbolt
+    type: application
+    urls:
+    - passbolt-0.7.0.tgz
+    version: 0.7.0
+  passbolt-library:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2023-11-21T14:49:18.967355185+01:00"
+    description: Helm chart that contains passbolt common templates
+    digest: af4c1db0cd7b851042064bdde6094f2310d4ca5d8b9ba855a5377655d7a944b1
+    name: passbolt-library
+    type: library
+    urls:
+    - charts/passbolt-library-0.2.7.tgz
+    version: 0.2.7
+  postgresql:
+  - annotations:
+      category: Database
+      images: |
+        - name: os-shell
+          image: docker.io/bitnami/os-shell:11-debian-11-r90
+        - name: postgres-exporter
+          image: docker.io/bitnami/postgres-exporter:0.15.0-debian-11-r0
+        - name: postgresql
+          image: docker.io/bitnami/postgresql:16.0.0-debian-11-r15
+      licenses: Apache-2.0
+    apiVersion: v2
+    appVersion: 16.0.0
+    created: "2023-11-21T14:49:18.971249583+01:00"
+    dependencies:
+    - name: common
+      repository: oci://registry-1.docker.io/bitnamicharts
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    description: PostgreSQL (Postgres) is an open source object-relational database
+      known for reliability and data integrity. ACID-compliant, it supports foreign
+      keys, joins, views, triggers and stored procedures.
+    digest: d84909393ea2151418fe35091bbbb59a58c54c13acf64bec891638412a374145
+    home: https://bitnami.com
+    icon: https://bitnami.com/assets/stacks/postgresql/img/postgresql-stack-220x234.png
+    keywords:
+    - postgresql
+    - postgres
+    - database
+    - sql
+    - replication
+    - cluster
+    maintainers:
+    - name: VMware, Inc.
+      url: https://github.com/bitnami/charts
+    name: postgresql
+    sources:
+    - https://github.com/bitnami/charts/tree/main/bitnami/postgresql
+    urls:
+    - charts/postgresql-13.2.3.tgz
+    version: 13.2.3
+  redis:
+  - annotations:
+      category: Database
+      licenses: Apache-2.0
+    apiVersion: v2
+    appVersion: 7.0.12
+    created: "2023-11-21T14:49:18.975343255+01:00"
+    dependencies:
+    - name: common
+      repository: oci://registry-1.docker.io/bitnamicharts
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    description: Redis(R) is an open source, advanced key-value store. It is often
+      referred to as a data structure server since keys can contain strings, hashes,
+      lists, sets and sorted sets.
+    digest: d4294efab48522de12073f0b44c9a6e351510845ede4a9056707a56017c925c1
+    home: https://bitnami.com
+    icon: https://bitnami.com/assets/stacks/redis/img/redis-stack-220x234.png
+    keywords:
+    - redis
+    - keyvalue
+    - database
+    maintainers:
+    - name: VMware, Inc.
+      url: https://github.com/bitnami/charts
+    name: redis
+    sources:
+    - https://github.com/bitnami/charts/tree/main/bitnami/redis
+    urls:
+    - charts/redis-17.15.2.tgz
+    version: 17.15.2
+generated: "2023-11-21T14:49:18.950295834+01:00"
