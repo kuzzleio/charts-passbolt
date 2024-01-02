@@ -6,7 +6,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 10.6.12
-    created: "2023-11-21T14:49:18.966921726+01:00"
+    created: "2024-01-02T10:05:00.46012813+01:00"
     dependencies:
     - name: common
       repository: https://charts.bitnami.com/bitnami
@@ -39,7 +39,33 @@ entries:
   passbolt:
   - apiVersion: v2
     appVersion: 4.4.0-1-ce
-    created: "2023-11-21T14:49:18.964383674+01:00"
+    created: "2024-01-02T10:05:00.457789366+01:00"
+    dependencies:
+    - name: passbolt-library
+      repository: https://download.passbolt.com/charts/passbolt-library
+      version: 0.2.7
+    - condition: redisDependencyEnabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 17.15.2
+    - condition: mariadbDependencyEnabled
+      name: mariadb
+      repository: https://charts.bitnami.com/bitnami
+      version: 11.5.7
+    - condition: postgresqlDependencyEnabled
+      name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 13.2.3
+    description: Helm chart for passbolt PRO and CE
+    digest: e7e3d1bd3e898336a01fb818ca1e9f0f6b6a97afa23d014d7d1041039d522b19
+    name: passbolt
+    type: application
+    urls:
+    - passbolt-0.7.1.tgz
+    version: 0.7.1
+  - apiVersion: v2
+    appVersion: 4.4.0-1-ce
+    created: "2024-01-02T10:05:00.441860803+01:00"
     dependencies:
     - name: passbolt-library
       repository: https://download.passbolt.com/charts/passbolt-library
@@ -66,7 +92,7 @@ entries:
   passbolt-library:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-11-21T14:49:18.967355185+01:00"
+    created: "2024-01-02T10:05:00.460524742+01:00"
     description: Helm chart that contains passbolt common templates
     digest: af4c1db0cd7b851042064bdde6094f2310d4ca5d8b9ba855a5377655d7a944b1
     name: passbolt-library
@@ -87,7 +113,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 16.0.0
-    created: "2023-11-21T14:49:18.971249583+01:00"
+    created: "2024-01-02T10:05:00.46366029+01:00"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -122,7 +148,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 7.0.12
-    created: "2023-11-21T14:49:18.975343255+01:00"
+    created: "2024-01-02T10:05:00.467595384+01:00"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -148,4 +174,4 @@ entries:
     urls:
     - charts/redis-17.15.2.tgz
     version: 17.15.2
-generated: "2023-11-21T14:49:18.950295834+01:00"
+generated: "2024-01-02T10:05:00.427803223+01:00"
